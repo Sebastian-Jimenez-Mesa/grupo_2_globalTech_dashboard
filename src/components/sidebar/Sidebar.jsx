@@ -23,7 +23,7 @@ export default function Sidebar() {
                         to="/users"
                         className="sidebarLink"
                         activeClassName="active">
-                           <i class="fa-solid fa-users"></i>
+                           <i className="fa-solid fa-users"></i>
                            Listado de usuarios
                         </NavLink>
                     </li>
@@ -32,7 +32,7 @@ export default function Sidebar() {
                         to="/products"
                         className="sidebarLink"
                         activeClassName="active">
-                           <i class="fa-solid fa-shop"></i>
+                           <i className="fa-solid fa-shop"></i>
                            Listado de productos
                         </NavLink>
                     </li>
@@ -41,9 +41,18 @@ export default function Sidebar() {
                         to="/categories" 
                         className="sidebarLink"
                         activeClassName="active">
-                           <i class="fa-sharp fa-solid fa-list-ul"></i>
+                           <i className="fa-sharp fa-solid fa-list-ul"></i>
                            Listado de categorías
                         </NavLink>
+                    </li>
+                    <li>
+                        <a target="blank"
+                        href="https://globaltech-grupo2.herokuapp.com/" 
+                        className="sidebarLink"
+                        activeClassName="active">
+                          <i class="fa-solid fa-globe"></i>
+                           Ir a Global Tech
+                        </a>
                     </li>
                 </ul>
                 </div>

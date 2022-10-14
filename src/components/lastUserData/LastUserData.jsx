@@ -4,27 +4,18 @@ import './lastUserData.css'
 export default class lastUserData extends React.Component {
   
     state = {
-        loading: true,
         lastUser: {},
-        avatar: "",
+
     }
 
     async componentDidMount () {
-        const url1 = 'https://dh-g9-clessidra.herokuapp.com/api/lastUser';
+        const url1 = 'https://globaltech-grupo2.herokuapp.com/apiLastUser';
         const response1 = await fetch(url1);
         const totals1 = await response1.json();
         this.setState({
-            loading: false,
             lastUser: totals1,
-            avatar: "https://dh-g9-clessidra.herokuapp.com/images/profileImages/" + totals1.data.avatar,
-            
         })
-        if(!this.state.lastUser.data.avatar) {
-            return this.setState(
-                {avatar: "https://dh-g9-clessidra.herokuapp.com/images/noAvatar.png"}
-            
-            )
-        }
+
     }
 
     render() {
@@ -42,20 +33,20 @@ export default class lastUserData extends React.Component {
                 </div>
                 <div className='lastUserDataSubContainer'>
                         <div className='lastUserDataItemContainer'>
-                            <span className='lastUserDataItemTitle'>ID:</span>
-                            <span className='lastUserDataItemValue'>{this.state.lastUser.data.id}</span>
+                            <span className='lastUserDataItemTitle'>Nombre:</span>
+                            <span className='lastUserDataItemValue'>{this.state.lastUser.name}</span>
                         </div>
                         <div className='lastUserDataItemContainer'>
-                            <span className='lastUserDataItemTitle'>Nombre:</span>
-                            <span className='lastUserDataItemValue'>{this.state.lastUser.data.nombre} {this.state.lastUser.data.apellido} </span>
+                            <span className='lastUserDataItemTitle'>Apellido:</span>
+                            <span className='lastUserDataItemValue'>{this.state.lastUser.lastName}</span>
                         </div>
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Email:</span>
-                        <span className='lastUserDataItemValue'>{this.state.lastUser.data.email} </span>
+                        <span className='lastUserDataItemValue'>{this.state.lastUser.email} </span>
                         </div>
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Imagen:</span>
-                        <span className='lastUserDataItemValue'><img src= {this.state.avatar} alt=""/></span>
+                        <span className='lastUserDataItemValue'><img src= {this.state.lastUser.url_image} alt=""/></span>
                         </div>                        
                     </div>
                 </div>

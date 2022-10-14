@@ -36,7 +36,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    
+    flex-wrap: wrap;
 }
 
 .lastProductDataItemTitle {
@@ -48,6 +48,7 @@
 }
 
 .lastProductDataItemValue {
+    text-align: justify;
     font-size: 16px;
     font-weight: bold;
     color:#ffffff;
@@ -56,7 +57,7 @@
 }
 
 .lastProductDataItemValue img {
-    width: 100px;
+    width: 200px;
     height: auto;
     border-radius: 10%;
     object-fit: cover;

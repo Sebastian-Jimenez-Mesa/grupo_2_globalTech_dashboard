@@ -4,26 +4,16 @@ import './lastProductData.css'
 export default class lastProductData extends React.Component {
   
     state = {
-        loading: true,
         lastProduct: {},
-        imagenProducto: ""
     }
 
     async componentDidMount () {
-        const url2 = 'https://dh-g9-clessidra.herokuapp.com/api/lastProduct';
+        const url2 = 'https://globaltech-grupo2.herokuapp.com/apiLastProduct';
         const response2 = await fetch(url2);
         const totals2 = await response2.json();
         this.setState({
-            loading: false,
             lastProduct: totals2,
-            imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/products/" + totals2.data.imagenes[0].nombreArchivo
     })                      
-        if(!this.state.lastProduct.data.imagenes[0].nombreArchivo){
-            return this.setState(
-                {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/noImage.png"}
-            
-            )
-        }
         
     }
 
@@ -45,26 +35,29 @@ export default class lastProductData extends React.Component {
                     <div className='lastProductDataItem'>
                         <div className='lastProductDataItemContainer'>
                             <span className='lastProductDataItemTitle'>ID:</span>
-                            <span className='lastProductDataItemValue'>{this.state.lastProduct.data.id}</span>
+                            <span className='lastProductDataItemValue'>{this.state.lastProduct.id}</span>
                         </div>
                         <div className='lastProductDataItemContainer'>
                             <span className='lastProductDataItemTitle'>Nombre de producto:</span>
-                            <span className='lastProductDataItemValue'>{this.state.lastProduct.data.nombre} {this.state.lastProduct.data.apellido} </span>
+                            <span className='lastProductDataItemValue'>{this.state.lastProduct.name} </span>
                         </div>
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Descripción:</span>
-                        <span className='lastProductDataItemValue'>{this.state.lastProduct.data.descripcion} </span>
+                        <span className='lastProductDataItemValue'>{this.state.lastProduct.description} </span>
+                        </div>
+                        <div className='lastProductDataItemContainer'>
+                        <span className='lastProductDataItemTitle'>Categoria:</span>
+                        <span className='lastProductDataItemValue'>{this.state.lastProduct.category} </span>
                         </div>
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Precio:</span>
-                        <span className='lastProductDataItemValue'>{this.state.lastProduct.data.precio} </span>
+                        <span className='lastProductDataItemValue'>{this.state.lastProduct.price} </span>
                         </div>
-                        
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Imagen:</span>
-                        <span className='lastProductDataItemValue'><img src= {this.state.imagenProducto} alt=""/></span>
-                        </div>                        
-                    </div>
+                        <span className='lastProductDataItemValue'><img src= {`https://globaltech-grupo2.herokuapp.com/images/Productos/${this.state.lastProduct.image}`} alt=""/></span>
+                        </div>
+                 </div>
                 </div>
                 </div>
         )
