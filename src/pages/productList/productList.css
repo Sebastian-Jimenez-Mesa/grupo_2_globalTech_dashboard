@@ -1,0 +1,13 @@
+.productList{
+    flex: 4;
+    padding: 10px;
+}
+
+th {
+    background: #00b8dc !important;
+}
+
+td img{
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px #c5c5c5;
+}

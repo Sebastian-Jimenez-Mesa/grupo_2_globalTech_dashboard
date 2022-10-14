@@ -1,0 +1,80 @@
+.sidebar {
+    height: calc(100vh - 50px);
+    background-color: #23242a;
+    position: sticky;
+    top: 50px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin-top: -10px;
+}
+
+.sidebarWrapper{
+    padding: 10px;
+    color: #555;
+
+}
+
+.sidebarMenu{
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+.sidebarTitle{
+    font-size: 22px;
+    color: rgb(16, 15, 15); 
+    font-weight: 600;
+}
+
+.sidebarList, .sidebarLink {
+    list-style: none;
+    padding: 0px;
+}
+
+.sidebarListItem {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.sidebarLink.active, .sidebarLink:hover{
+    color:#ffffff;
+    
+}
+
+.sidebarIcon {
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+
+.sidebarLink{
+    color: #00B8D4;
+    text-decoration: none;
+    padding: 16px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;   
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.fa-house-user:before {
+    margin-right: 5px;
+}
+
+.fa-users:before {
+    margin-right: 5px;
+}
+
+i.fa-solid.fa-shop {
+    margin-right: 5px;
+}
+
+.fa-list-ul:before{
+    margin-right: 5px;
+}
