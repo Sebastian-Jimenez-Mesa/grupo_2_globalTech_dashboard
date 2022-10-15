@@ -45,19 +45,19 @@ export default class totalsDataInfo extends React.Component {
                 </div>
                 <div className='totalsDataSubContainer'>
                     <div className='totalsDataItem'>
-                        <span className='totalsDataItemTitle'>Total Usuarios</span>
+                        <span className='totalsDataItemTitle'>Total de Usuarios</span>
                         <div className='totalsDataItemContainer'>
                             <span className='totalsDataItemValue'>{this.state.usersCount.count}</span>
                         </div>
                     </div>
                     <div className='totalsDataItem'>
-                        <span className='totalsDataItemTitle'>Total Productos</span>
+                        <span className='totalsDataItemTitle'>Total de Productos</span>
                         <div className='totalsDataItemContainer'>
                             <span className='totalsDataItemValue'>{this.state.productsCount.count}</span>                          
                         </div>
                     </div>
                     <div className='totalsDataItem'>
-                        <span className='totalsDataItemTitle'>Total Categorías</span>
+                        <span className='totalsDataItemTitle'>Total de Categorías</span>
                         <div className='totalsDataItemContainer'>
                             <span className='totalsDataItemValue'>{this.state.categoriesCount.countCategories}</span>
                         </div> 

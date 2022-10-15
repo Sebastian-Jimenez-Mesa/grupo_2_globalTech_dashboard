@@ -27,7 +27,7 @@ class ProdXCat extends Component {
                     <tr>
                         <th>ID</th>
                         <th>Descripción</th>
-                        <th>Cantidad de productos asociados</th>
+                        <th>Total de productos por categoria</th>
                     </tr>
                 </thead>
                 <tbody>

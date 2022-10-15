@@ -8,11 +8,11 @@ export default class lastProductData extends React.Component {
     }
 
     async componentDidMount () {
-        const url2 = 'https://globaltech-grupo2.herokuapp.com/apiLastProduct';
-        const response2 = await fetch(url2);
-        const totals2 = await response2.json();
+        const url = 'https://globaltech-grupo2.herokuapp.com/apiLastProduct';
+        const response = await fetch(url);
+        const totals = await response.json();
         this.setState({
-            lastProduct: totals2,
+            lastProduct: totals,
     })                      
         
     }

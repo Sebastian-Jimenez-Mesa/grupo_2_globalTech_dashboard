@@ -9,11 +9,11 @@ export default class lastUserData extends React.Component {
     }
 
     async componentDidMount () {
-        const url1 = 'https://globaltech-grupo2.herokuapp.com/apiLastUser';
-        const response1 = await fetch(url1);
-        const totals1 = await response1.json();
+        const url = 'https://globaltech-grupo2.herokuapp.com/apiLastUser';
+        const response = await fetch(url);
+        const totals = await response.json();
         this.setState({
-            lastUser: totals1,
+            lastUser: totals,
         })
 
     }
